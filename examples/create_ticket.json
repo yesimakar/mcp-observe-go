@@ -1,0 +1,15 @@
+{
+  "session_id": "sess_002",
+  "client_name": "local-demo-agent",
+  "actor": "yesim@example.com",
+  "tool_name": "create_ticket",
+  "environment": "development",
+  "arguments": {
+    "title": "Review MCP approval policy",
+    "description": "Create an engineering follow-up ticket for reviewing high-risk MCP tool approval rules.",
+    "severity": "medium"
+  },
+  "budget": {
+    "max_units": 5
+  }
+}

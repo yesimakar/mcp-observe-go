@@ -1,0 +1,14 @@
+{
+  "session_id": "sess_demo_001",
+  "client_name": "claude-desktop",
+  "actor": "engineer@example.com",
+  "environment": "development",
+  "tool_name": "search_docs",
+  "arguments": {
+    "query": "approval rules for high-risk tools",
+    "limit": 3
+  },
+  "budget": {
+    "max_units": 10
+  }
+}

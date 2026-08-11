@@ -1,0 +1,15 @@
+{
+  "session_id": "sess_003",
+  "client_name": "local-demo-agent",
+  "actor": "yesim@example.com",
+  "tool_name": "send_notification",
+  "environment": "development",
+  "arguments": {
+    "recipient": "engineering-team",
+    "message": "MCP gateway policy checks completed successfully.",
+    "channel": "slack"
+  },
+  "budget": {
+    "max_units": 5
+  }
+}

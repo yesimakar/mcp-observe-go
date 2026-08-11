@@ -1,0 +1,15 @@
+{
+  "session_id": "sess_demo_003",
+  "client_name": "mcp-client",
+  "actor": "engineer@example.com",
+  "environment": "production",
+  "tool_name": "delete_record",
+  "approval_token": "approved-demo-token",
+  "arguments": {
+    "record_id": "cust_123",
+    "reason": "duplicate test record"
+  },
+  "budget": {
+    "max_units": 10
+  }
+}
