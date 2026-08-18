@@ -399,6 +399,7 @@ docker compose down
 This project is designed for local development and portfolio review.
 
 - Do not expose the gateway directly to the public internet without authentication, authorization, rate limiting, TLS, and tenant isolation.
+- The `/audit` endpoint is intended for local demo use only. In a production deployment, audit access should require authentication and authorization.
 - Do not put secrets, API keys, tokens, raw prompts, or sensitive customer data into trace attributes.
 - Tool arguments are hashed for trace attributes and redacted in audit logs when sensitive key names are used.
 - `delete_record` is a mock tool and does not delete real data.

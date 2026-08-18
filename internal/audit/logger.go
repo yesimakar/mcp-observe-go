@@ -8,6 +8,7 @@ import (
 	"errors"
 	"os"
 	"path/filepath"
+	"strings"
 	"sync"
 	"time"
 )
@@ -103,14 +104,24 @@ func ReadLast(path string, limit int) ([]Record, error) {
 
 func RedactArguments(args map[string]any) map[string]any {
 	redacted := make(map[string]any, len(args))
+
 	for key, value := range args {
-		normalized := key
-		if normalized == "token" || normalized == "api_key" || normalized == "password" || normalized == "secret" {
+		normalized := strings.ToLower(key)
+
+		if strings.Contains(normalized, "token") ||
+			strings.Contains(normalized, "secret") ||
+			strings.Contains(normalized, "password") ||
+			strings.Contains(normalized, "api_key") ||
+			strings.Contains(normalized, "apikey") ||
+			strings.Contains(normalized, "authorization") ||
+			strings.Contains(normalized, "credential") {
 			redacted[key] = "[redacted]"
 			continue
 		}
+
 		redacted[key] = value
 	}
+
 	return redacted
 }
 
