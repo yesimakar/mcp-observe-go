@@ -119,7 +119,7 @@ The project uses MCP-oriented custom trace attributes. It does not claim these a
 
 Install:
 
-- Go 1.23+
+- Go 1.24+
 - curl
 - Docker Desktop, optional, only for the OpenTelemetry Collector demo
 
